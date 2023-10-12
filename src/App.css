@@ -1,0 +1,341 @@
+*{
+  color:white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html{
+  height: 100%;
+}
+
+body {
+  margin:0;
+  padding:0;
+  background: linear-gradient(#141e30, #243b55);
+  }
+
+
+.container{
+  background-color: gainsboro;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
+
+.exclusion-container{
+  top: 80%;
+}
+
+form {
+  max-width: 600px;
+  text-align: center;
+  margin: 20px auto;
+  
+  padding: 20px;
+  }
+
+  form > *{
+    margin-top: 30px;
+   }
+
+   /*Align radio buttons at left but in the center of screen */
+   .start-form> *{
+    margin: auto;
+    width: 50%;
+    text-align: left;
+   }
+
+   
+
+
+
+  
+
+.input-user {
+    border:0; outline:0;
+    border-bottom: 2px solid #9b9b9b;
+    padding: 1em;
+    margin-top: 1em;
+    font-family: 'Merriweather', sans-serif;
+    font-size: 1.3rem;
+    resize: none;
+    border-bottom: 1px solid black;
+    width: 80%;
+    color: #fff;
+    background: transparent;
+    transition: border-color 0.2s;
+ }
+
+
+/* Handle autofill styles */
+.input-user:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset; /* Override default autofill background */
+  -webkit-text-fill-color: #fff; /* Change text color for autofill */
+  transition: background-color 5000s ease-in-out 0s; /* Delay background change */
+}
+
+
+
+.input-user:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+}
+
+.input-user::placeholder {
+  color: #ffffffbe;
+}
+
+.input-user:focus::placeholder {
+  color: #fff; /* Color when focused */
+}
+
+
+/*Progress bar*/
+ .progress-p{
+  text-align: center;
+ }
+
+ .progress-bar {
+  width: 400px;
+  margin:0 auto;
+  height: 15px;
+  
+  margin-bottom: 50px;
+}
+
+.progress-bar div {
+  width: 25%;
+  height: 100%;
+  background-color: white;
+}
+
+
+/*Custom select for countries API*/
+
+.select-countries {
+  appearance: none;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  width: 100%;
+  cursor: pointer;
+}
+
+
+.select-countries:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+
+
+
+/*Test for radio for Start.js*/
+
+input[type="radio"] {
+  /* remove standard background appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* create custom radiobutton appearance */
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  padding: 6px;
+  /* background-color only for content */
+  background-clip: content-box;
+  border: 1px solid #00b8d4;
+  background-color: #00b8d4;
+  border-radius: 50%;
+  text-align: left;
+  
+}
+
+/* appearance for checked radiobutton */
+input[type="radio"]:checked {
+  border: 1px solid #ad1457;
+  background-color: #ad1457;
+}
+
+
+.Form-label {
+  color: #00b8d4;
+  font-weight: 400;
+  transition: .3s;
+}
+
+.Form-label::before {
+  content: "";
+  margin-right: .2em;
+}
+
+.Form-label, .Form-input { 
+  cursor: pointer; 
+  margin: 1px;
+}
+
+/*Center radio buttons to text*/
+.Form-input { 
+  cursor: pointer; 
+  margin-bottom: -6px;
+}
+
+.header-label{
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+
+
+.Form-label--radio::before {
+  border-radius: 50%;
+}
+.Form-input:checked + .Form-label--radio {
+  color: #ad1457;
+  font-weight: 500;
+}
+
+/*.Form-input:checked + .Form-label--radio::before {
+  content: "✔️";
+}*/
+
+
+.option-countries, .select-countries{
+  background-color: black;
+}
+
+
+
+
+
+
+
+
+.item-description{
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.checkbox-label{
+  font-size: 20px;
+  color: #ffef96;
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+/*Center button component*/
+.button{
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+
+input{
+  color:black;
+}
+
+.start_headers_container{
+
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.start_title{
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.start_description{
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+
+/*NEW*/
+
+/* Hide the default checkbox */
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox design */
+.checkbox-label {
+  position: relative;
+  padding-left: 30px; /* Adjust the spacing between the checkbox and label */
+  cursor: pointer;
+}
+
+.custom-checkbox {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px; /* Set the size of the custom checkbox */
+  height: 20px;
+  border: 2px solid #000; /* Set the border color of the checkbox */
+  border-radius: 4px; /* Make the checkbox rounded */
+  background-color: white;
+}
+
+/* Style the custom checkbox when it's checked */
+input:checked + .custom-checkbox::before {
+  content: "\2713"; /* Unicode checkmark character */
+  display: block;
+  text-align: center;
+  line-height: 20px; /* Vertically center the checkmark */
+  background-color: red; /* Set the fill color of the checked checkbox */
+  color: #fff; /* Set the color of the checkmark */
+}
+
+/* Style the custom checkbox when it's checked and disabled */
+input:checked:disabled + .custom-checkbox::before {
+  content: "\2713"; /* Unicode checkmark character */
+  display: block;
+  text-align: center;
+  line-height: 20px; /* Vertically center the checkmark */
+  background-color: #ccc; /* Set the fill color of the checked and disabled checkbox */
+  color: #999; /* Set the color of the checkmark */
+}
+
+
+
+.header-info{
+  background-color: #92A8D1;
+  padding: 8px;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+.main-header {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.sub-header {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
